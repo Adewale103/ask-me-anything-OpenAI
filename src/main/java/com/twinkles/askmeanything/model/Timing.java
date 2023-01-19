@@ -1,4 +1,4 @@
-package com.twinkles.askmeanything.dto;
+package com.twinkles.askmeanything.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

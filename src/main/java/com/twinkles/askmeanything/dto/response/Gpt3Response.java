@@ -1,7 +1,7 @@
 package com.twinkles.askmeanything.dto.response;
 
-import com.twinkles.askmeanything.dto.Data;
-import com.twinkles.askmeanything.dto.Timing;
+import com.twinkles.askmeanything.model.Data;
+import com.twinkles.askmeanything.model.Timing;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
