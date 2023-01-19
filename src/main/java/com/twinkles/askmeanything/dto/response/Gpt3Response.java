@@ -1,7 +1,7 @@
 package com.twinkles.askmeanything.dto.response;
 
 import com.twinkles.askmeanything.model.Data;
-import com.twinkles.askmeanything.model.Timing;
+import com.twinkles.askmeanything.model.Usage;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class Gpt3Response {
     private String id;
-    private String engine;
-    private String prompt;
-    private List<Data> choices;
+    private String object;
+    private int created;
     private String model;
-    private Timing timing;
+    private List<Data> choices;
+    private Usage usage;
 }

@@ -1,18 +1,15 @@
 package com.twinkles.askmeanything.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Data {
     private String text;
     private int index;
     private String logprobs;
-    private String stop;
-    private int score;
+    private String finish_reason;
 }

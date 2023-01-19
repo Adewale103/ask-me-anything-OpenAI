@@ -11,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Gpt3Request {
     private String prompt;
-    private int maxTokens;
-    private String stop;
+    private int max_tokens;
+    private String model;
+    private int temperature;
 }

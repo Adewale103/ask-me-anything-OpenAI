@@ -18,13 +18,17 @@ public class GPT3Service {
 
             Gpt3Request request = new Gpt3Request();
             request.setPrompt(prompt);
-            request.setMaxTokens(250);
-            request.setStop(">");
+            request.setMax_tokens(250);
+            request.setTemperature(1);
+
 
             HttpEntity<Gpt3Request> entity = new HttpEntity<>(request, headers);
 
             Gpt3Response response = restTemplate.postForObject(API_URL, entity, Gpt3Response.class);
             assert response != null;
+            for (int i = 0; i < response.getChoices().size(); i++) {
+                System.out.println(response.getChoices().get(i));
+            }
             return response.getChoices().get(0).getText();
         }
     }
