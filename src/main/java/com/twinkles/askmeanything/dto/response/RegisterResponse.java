@@ -8,5 +8,6 @@ import lombok.*;
 @Builder
 public class RegisterResponse {
     private String id;
+    private String username;
     private String email;
 }

@@ -10,7 +10,7 @@ public class GPT3Service {
         private static final String API_URL = System.getenv("API_URL");
         private static final String API_KEY = System.getenv("API_KEY");
 
-        public String generateText(String prompt) {
+        public static String generateText(String prompt) {
             RestTemplate restTemplate = new RestTemplate();
             HttpHeaders headers = new HttpHeaders();
             headers.set("Content-Type", "application/json");
