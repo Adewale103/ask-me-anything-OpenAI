@@ -1,5 +1,6 @@
 package com.twinkles.askmeanything.service;
 
+import com.twinkles.askmeanything.dto.request.RegisterRequest;
 import com.twinkles.askmeanything.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,11 +15,13 @@ class UserServiceImplTest {
     private UserService userService;
     @Mock
     private UserRepository userRepository;
+    private RegisterRequest registerRequest;
 
 
     @BeforeEach
     void setUp() {
         userService = new UserServiceImpl(userRepository);
+        registerRequest = RegisterRequest.builder().build();
     }
 
     @Test
