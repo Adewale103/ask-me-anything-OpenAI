@@ -1,6 +1,7 @@
 package com.twinkles.askmeanything.service;
 
 import com.twinkles.askmeanything.dto.request.RegisterRequest;
+import com.twinkles.askmeanything.dto.response.RegisterResponse;
 import com.twinkles.askmeanything.model.User;
 import com.twinkles.askmeanything.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -47,6 +49,7 @@ class UserServiceImplTest {
     public void userCanRegisterTest(){
         when(userRepository.findByEmail(any(String.class))).thenReturn(Optional.empty());
         when(userRepository.save(any(User.class))).thenReturn(user);
-
+        RegisterResponse registerResponse = userService.register(registerRequest);
+        assertThat(registerResponse.getEmail()).isEqualTo("james@gmail.com");
     }
 }
