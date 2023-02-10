@@ -52,4 +52,9 @@ class UserServiceImplTest {
         RegisterResponse registerResponse = userService.register(registerRequest);
         assertThat(registerResponse.getEmail()).isEqualTo("james@gmail.com");
     }
+
+    @Test
+    public void userCanAskQuestionTest(){
+
+    }
 }
